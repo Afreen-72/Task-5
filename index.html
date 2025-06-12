@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Beauty Handbook - Your Beauty Destination</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lovers+Quarrel&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>The Beauty Handbook</h1>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <a href="index.html">Home</a>
+            <a href="#content-area">Tutorials</a>
+            <a href="#reviews-section">Reviews</a>
+            <a href="#contact-section">Contact</a>
+        </div>
+    </nav>
+
+    <section id="showcase">
+        <div class="container">
+            <h1>Unlock Your Beauty Potential</h1>
+            <p>Discover the latest makeup trends, tips, and tricks.</p>
+        </div>
+    </section>
+
+    <section id="content-area">
+        <div class="makeup-post">
+            <img src="makeup_post1.jpg" alt="Classic Red Lip Look" loading="lazy">
+            <h2>Classic Red Lip</h2>
+            <p>If you are an enthusiast for red lips, then this is the perfect guide for you.
+                Follow these easy steps and achieve your dream lip color combo.</p>
+            <a href="classic-red-lip.html">Read More</a>
+        </div>
+
+        <div class="makeup-post">
+            <img src="makeup_post2.jpeg" alt="Smokey Eye Makeup Look" loading="lazy">
+            <h2>Smokey Eye Tutorial</h2>
+            <p>Smokey eyes and a bold appearance! If this is what you desire, then this is the perfect guide for you.
+                Follow these easy steps to achieve the best smokey eye makeup look.</p>
+            <a href="smokey-eye.html">Read More</a>
+        </div>
+
+        <div class="makeup-post">
+            <img src="natural_glow.jpg" alt="Natural Glow Makeup" loading="lazy">
+            <h2>Achieving a Natural Glow</h2>
+            <p>Want that effortless, radiant look? This guide will walk you through the steps to achieve a beautiful natural glow.</p>
+            <a href="natural-glow.html">Read More</a>
+        </div>
+
+        <div class="makeup-post">
+            <img src="bold_eyeliner.jpg" alt="Bold Eyeliner Look" loading="lazy">
+            <h2>Mastering the Bold Eyeliner</h2>
+            <p>Learn the techniques to create a sharp and striking bold eyeliner look that will make your eyes pop.</p>
+            <a href="bold-eyeliner.html">Read More</a>
+        </div>
+    </section>
+
+    <section id="subscription-form">
+        <div class="container">
+            <h2>Subscribe to Our Newsletter</h2>
+            <form id="newsletter-form">
+                <input type="text" id="name" name="name" placeholder="Enter your name">
+                <div id="name-error" class="error-message">Please enter your name</div>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+                <div id="email-error" class="error-message">Please enter a valid email address</div>
+                <button type="submit">Subscribe Now</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="quiz-section">
+        <div class="container">
+            <h2>Makeup Quiz!</h2>
+            <div id="quiz-display">
+                <p id="question-text"></p>
+                <div id="answer-buttons"></div>
+                <p id="feedback-text"></p>
+                <p id="score-display"></p>
+                <button id="next-question-button">Next Question</button>
+                <button id="restart-quiz-button" style="display:none;">Restart Quiz</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="api-data-section">
+        <div class="container">
+            <h2>Beauty Quote of the Day</h2>
+            <div id="quote-display">
+                <p id="quote-text"></p>
+                <p id="quote-author"></p>
+            </div>
+            <button id="fetch-quote-button">Get New Quote</button>
+        </div>
+    </section>
+
+    <section id="todo-list-container">
+        <div class="container">
+            <h2>My Beauty To-Do List</h2>
+            <div id="todo-input-area">
+                <input type="text" id="todo-input" placeholder="Add a new beauty task...">
+                <button id="add-todo-button">Add Task</button>
+            </div>
+            <ul id="todo-list">
+            </ul>
+        </div>
+    </section>
+
+    <section id="image-gallery-container">
+        <div class="container">
+            <h2>Your Personal Image Gallery</h2>
+            <div id="image-upload-area">
+                <input type="file" id="image-upload" accept="image/*">
+                <button id="upload-image-button">Upload Image</button>
+            </div>
+            <ul id="image-gallery">
+            </ul>
+        </div>
+    </section>
+
+    <section id="reviews-section" class="container">
+        <h2>What Our Users Say</h2>
+        <div class="review-grid">
+            <div class="review-card">
+                <h3>Sarah L.</h3>
+                <p>"The Beauty Handbook has transformed my makeup routine! The tutorials are easy to follow, and the product reviews are always spot on. My skin has never looked better!"</p>
+            </div>
+            <div class="review-card">
+                <h3>Jessica P.</h3>
+                <p>"I used to struggle with winged eyeliner, but thanks to the clear steps provided here, I've finally mastered it! This site is my go-to for all beauty tips."</p>
+            </div>
+            <div class="review-card">
+                <h3>Michael B.</h3>
+                <p>"As a beginner, I found the quiz super helpful for understanding different makeup products. The daily quotes are a nice touch too. Highly recommend!"</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-section" class="container">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <p>Have questions or suggestions? Reach out to us!</p>
+            <p><strong>Mobile:</strong> +91 98765 43210</p>
+            <p><strong>Email:</strong> info@beautyhandbook.com</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Copyright 2025, The Beauty Handbook</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

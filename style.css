@@ -1,0 +1,758 @@
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    background-color: #f9f5f6;
+    color: #333;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+    overflow: hidden;
+    padding: 25px;
+}
+
+header {
+    background: #f7dcd0;
+    color: #fff;
+    padding-top: 40px;
+    min-height: 80px;
+    border-bottom: 4px solid #e8b3a3;
+    text-align: center;
+}
+
+header h1 {
+    color: #5c3d2e;
+    font-size: 2.8em;
+    font-family: 'Lovers Quarrel', cursive;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+nav {
+    background: #e8b3a3;
+    color: #fff;
+    padding: 12px 0;
+    text-align: center;
+    font-size: 1.1em;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 7px;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    background: #5c3d2e;
+    color: #fff;
+}
+
+#showcase {
+    min-height: 350px;
+    background: url('makeup_banner.jpg') no-repeat center center/cover;
+    text-align: center;
+    color: #121111;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#showcase h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    font-family: 'Lovers Quarrel', cursive;
+    font-weight: normal;
+}
+
+#showcase p {
+    font-size: 1.5em;
+    font-weight: bold;
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+}
+
+#content-area {
+    padding: 30px;
+    background: #fff;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.makeup-post {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 0;
+    background: #fefefe;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.makeup-post:hover {
+    transform: translateY(-5px);
+}
+
+.makeup-post img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 3px 3px 8px #ccc;
+}
+
+.makeup-post h2 {
+    color: #e8b3a3;
+    font-size: 2em;
+    font-family: 'Lovers Quarrel', cursive;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.makeup-post p {
+    font-size: 1.2em;
+    line-height: 1.7;
+}
+
+.makeup-post a {
+    display: inline-block;
+    background: #e8b3a3;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 15px;
+    font-size: 1.1em;
+    box-shadow: 2px 2px 5px #ccc;
+    transition: background-color 0.3s ease;
+}
+
+.makeup-post a:hover {
+    background: #5c3d2e;
+}
+
+footer {
+    background: #5c3d2e;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 1em;
+}
+
+button {
+    background-color: #e8b3a3;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2em;
+    display: block;
+    margin: 30px auto 0;
+    box-shadow: 2px 2px 5px #ccc;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #5c3d2e;
+}
+
+#subscription-form, #quiz-section, #api-data-section, #todo-list-container, #image-gallery-container {
+    background-color: #f7dcd0;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+    text-align: center;
+    border: 1px solid #e8b3a3;
+}
+
+#subscription-form h2, #quiz-section h2, #api-data-section h2, #todo-list-container h2, #image-gallery-container h2 {
+    color: #5c3d2e;
+    font-size: 2em;
+    font-family: 'Lovers Quarrel', cursive;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+#subscription-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+#subscription-form input[type="text"],
+#subscription-form input[type="email"] {
+    padding: 12px;
+    margin: 8px 0;
+    width: 80%;
+    max-width: 400px;
+    border: 1px solid #e8b3a3;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+#subscription-form input[type="text"]:focus,
+#subscription-form input[type="email"]:focus {
+    outline: none;
+    border-color: #5c3d2e;
+}
+
+#subscription-form button {
+    margin-top: 20px;
+    width: 80%;
+    max-width: 400px;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+    display: none;
+}
+
+.error-message.show {
+    display: block;
+}
+
+/* Quiz Section Styles */
+#quiz-section {
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+#quiz-display {
+    padding: 20px;
+}
+
+#question-text {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #5c3d2e;
+}
+
+#answer-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#answer-buttons button {
+    background-color: #e8b3a3;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto; /* Center buttons */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#answer-buttons button:hover {
+    background-color: #5c3d2e;
+    transform: translateY(-2px);
+}
+
+#answer-buttons button.correct {
+    background-color: #4CAF50; /* Green for correct */
+}
+
+#answer-buttons button.incorrect {
+    background-color: #f44336; /* Red for incorrect */
+}
+
+#feedback-text {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 15px;
+    min-height: 25px; /* Reserve space to prevent layout shift */
+}
+
+#score-display {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #5c3d2e;
+}
+
+#next-question-button, #restart-quiz-button {
+    margin-top: 20px;
+    width: auto; /* Allow button to size based on content */
+    padding: 10px 25px;
+}
+
+/* API Data Section Styles */
+#api-data-section {
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+#quote-display {
+    padding: 15px;
+    font-style: italic;
+    color: #5c3d2e;
+}
+
+#quote-text {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+#quote-author {
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: right;
+}
+
+#fetch-quote-button {
+    margin-top: 20px;
+}
+
+/* To-Do List Styles */
+#todo-list-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#todo-list-container h2 {
+    color: #e8b3a3;
+    font-size: 2em;
+    font-family: 'Lovers Quarrel', cursive;
+    font-weight: normal;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#todo-input-area {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#todo-input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #e8b3a3;
+    border-radius: 5px 0 0 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+#todo-input:focus {
+    outline: none;
+    border-color: #5c3d2e;
+}
+
+#add-todo-button {
+    background-color: #e8b3a3;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+#add-todo-button:hover {
+    background-color: #5c3d2e;
+}
+
+#todo-list {
+    list-style: none;
+    padding: 0;
+}
+
+#todo-list li {
+    background-color: #f9f9f9;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+    font-size: 1.1em;
+     transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#todo-list li:hover{
+    background-color: #f0f0f0;
+    transform: translateX(5px);
+}
+
+#todo-list li span{
+    word-break: break-all;
+    flex: 1;
+    margin-right: 10px;
+}
+
+.delete-todo-button {
+    background-color: #e8b3a3;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.delete-todo-button:hover {
+    background-color: #5c3d2e;
+}
+
+/* Image Gallery Styles */
+#image-gallery-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#image-gallery-container h2 {
+    color: #e8b3a3;
+    font-size: 2em;
+    font-family: 'Lovers Quarrel', cursive;
+    font-weight: normal;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#image-upload-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#image-upload {
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+#upload-image-button {
+    background-color: #e8b3a3;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+#upload-image-button:hover {
+    background-color: #5c3d2e;
+}
+
+#image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 0;
+    list-style: none;
+}
+
+#image-gallery li {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#image-gallery li:hover{
+    transform: scale(1.05);
+}
+
+#image-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.delete-image-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: rgba(232, 179, 163, 0.7);
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8em;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#image-gallery li:hover .delete-image-button {
+    opacity: 1;
+}
+
+.delete-image-button:hover {
+    background-color: #5c3d2e;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 5px 0;
+    }
+
+    #showcase h1 {
+        font-size: 2.5em;
+    }
+
+    #showcase p {
+        font-size: 1.2em;
+    }
+
+    #content-area {
+        grid-template-columns: 1fr;
+    }
+    #subscription-form input[type="text"],
+    #subscription-form input[type="email"]{
+         width: 95%;
+    }
+    #subscription-form button{
+         width: 95%;
+    }
+    #todo-input-area {
+        flex-direction: column;
+    }
+    #todo-input{
+        border-radius: 5px 5px 0 0;
+        margin-bottom: 10px;
+    }
+    #add-todo-button{
+        border-radius: 0 0 5px 5px;
+    }
+    #quiz-display #answer-buttons button {
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    #showcase h1 {
+        font-size: 2em;
+    }
+
+    #showcase p {
+        font-size: 1em;
+    }
+     .makeup-post img{
+        width: 95%;
+     }
+}
+
+/* --- Styles for Tutorial Pages (Ensure these are in your main style.css) --- */
+
+.tutorial-content {
+    background-color: #fff;
+    padding: 40px 25px;
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tutorial-content h2 {
+    color: #5c3d2e;
+    font-size: 2.5em;
+    font-family: 'Lovers Quarrel', cursive;
+    font-weight: normal;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.tutorial-content img {
+    display: block;
+    max-width: 80%;
+    height: auto;
+    margin: 0 auto 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+
+.tutorial-steps {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.15em;
+    line-height: 1.8;
+    color: #444;
+    text-align: left;
+}
+
+.tutorial-steps ol {
+    list-style: decimal;
+    padding-left: 25px;
+}
+
+.tutorial-steps li {
+    margin-bottom: 15px;
+    padding-left: 5px;
+}
+
+.tutorial-steps h3 {
+    color: #e8b3a3;
+    font-size: 1.6em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* This is the key styling for the Back to Home button */
+.back-button {
+    display: block; /* Make it a block element to control width and margin */
+    width: fit-content; /* Adjust width to content */
+    margin: 40px auto 20px; /* Center the button and add vertical spacing */
+    background-color: #e8b3a3; /* Button background color */
+    color: white; /* Text color */
+    padding: 12px 25px; /* Padding inside the button */
+    border: none; /* Remove default border */
+    border-radius: 8px; /* Slightly rounded corners */
+    cursor: pointer; /* Indicate it's clickable */
+    font-size: 1.2em; /* Larger text for readability */
+    text-decoration: none; /* Remove underline for links */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+    text-align: center; /* Center the text inside the button */
+}
+
+.back-button:hover {
+    background-color: #5c3d2e; /* Darker color on hover */
+}
+
+@media (max-width: 768px) {
+    .tutorial-content img {
+        max-width: 95%;
+    }
+    .tutorial-steps {
+        padding: 0 15px;
+    }
+}
+
+/* Reviews Section Styles */
+#reviews-section {
+    background-color: #f7dcd0;
+    padding: 40px 25px;
+    margin-top: 30px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #e8b3a3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#reviews-section h2 {
+    color: #5c3d2e;
+    font-size: 2.5em;
+    font-family: 'Lovers Quarrel', cursive;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    max-width: 1000px; /* Limit width for readability */
+    margin: 0 auto;
+}
+
+.review-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+}
+
+.review-card h3 {
+    color: #e8b3a3;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.review-card p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Contact Section Styles */
+#contact-section {
+    background-color: #fff;
+    padding: 40px 25px;
+    margin-top: 30px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contact-section h2 {
+    color: #5c3d2e;
+    font-size: 2.5em;
+    font-family: 'Lovers Quarrel', cursive;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.contact-info strong {
+    color: #e8b3a3;
+}
+
+/* Media Queries for Responsiveness - ADDITIONS for new sections */
+@media (max-width: 768px) {
+    /* Existing media queries... */
+    .review-grid {
+        grid-template-columns: 1fr; /* Stack reviews on smaller screens */
+    }
+}
